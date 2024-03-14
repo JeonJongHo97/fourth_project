@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <!-- JS -->
+    <script src="JS/common.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <div id="top_nav">
+            <div class="logo"><img src="img/logo.png" alt="로고"></div>
+
+            <div class="search">
+                <input type="search" value="Search">
+                <button><a href="#">찾기</a></button>
+            </div>
+
+        </div>
+
+        <div id="bottom_nav">
+            <ul class="nav">
+                <li><a href="#">대학교재</a></li>
+                <li><a href="#">초중고</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">사은품</a></li>
+                <li><a href="#">PICKS</a></li>
+                <li><a href="#">CASTing</a></li>
+
+            </ul>
+        </div>
+
+    </header>
+
+    <div id="slider"></div>
+
+    <div id="other">
+        <div class="box_1"></div>
+        <div class="box_1"></div>
+        <div class="box_1"></div>
+        <div class="box_1"></div>
+    </div>
+
+    <div id="information">
+        <div class="box_2"></div>
+        <div class="box_2"></div>
+    </div>
+
+    <section>
+        <h4>추천 도서</h4>
+
+        <ul id="booklist">
+            <li>문학</li>
+            <li>유아</li>
+            <li>경제</li>
+        </ul>
+
+        <h6 id="titlelist">문학/인문</h6>
+
+        <article id="list_a" class="list">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </article>
+
+        <article id="list_b" class="list">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </article>
+
+
+        <article id="list_c" class="list">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </article>
+
+    </section>
+
+    <script>
+        $.ajax({
+          method: "GET",
+          url: "https://dapi.kakao.com/v3/search/book?target=title",
+          data: { query: "파리" },
+          headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+        })
+          .done(function (msg) {
+    
+            const boxs = $('#list_a .box');
+    
+            for (let i = 0; i < boxs.length; i++) {
+    
+              $("#list_a >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+              $("#list_a >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+              $("#list_a >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+    
+    
+              let str = msg.documents[i].contents;
+              let str2 = str.substring(0, 60);
+    
+              $("#list_a >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
+              $("#list_a >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
+    
+            }
+    
+          });
+    
+    
+        $.ajax({
+          method: "GET",
+          url: "https://dapi.kakao.com/v3/search/book?target=title",
+          data: { query: "유아" },
+          headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+        })
+          .done(function (msg) {
+    
+            // for문 (8개)
+            const boxs = $('#list_b .box');
+    
+    
+            for (let i = 0; i < boxs.length; i++) {
+    
+              $("#list_b >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+              $("#list_b >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+              $("#list_b >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+    
+    
+              let str = msg.documents[i].contents;
+              let str2 = str.substring(0, 60);
+    
+              $("#list_b >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
+              $("#list_b >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
+    
+            }
+          });
+    
+    
+        $.ajax({
+          method: "GET",
+          url: "https://dapi.kakao.com/v3/search/book?target=title",
+          data: { query: "경제" },
+          headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+        })
+          .done(function (msg) {
+    
+            // for문 (8개)
+            const boxs = $('#list_b .box');
+    
+    
+            for (let i = 0; i < boxs.length; i++) {
+    
+              $("#list_c >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+              $("#list_c >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+              $("#list_c >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+    
+    
+              let str = msg.documents[i].contents;
+              let str2 = str.substring(0, 60);
+    
+              $("#list_c >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
+              $("#list_c >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
+    
+            }
+    
+          });
+    
+    
+      </script>
+
+</body>
+
+</html>
