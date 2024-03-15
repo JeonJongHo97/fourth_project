@@ -2,192 +2,199 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
-    <!-- JS -->
-    <script src="JS/common.js"></script>
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+  <!-- JS -->
+  <script src="JS/common.js"></script>
+  <script src="JS/slidewrap.js"></script>
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
 
 
 
 </head>
 
 <body>
-    <header>
+  <header>
 
-        <div id="top_nav">
-            <div class="logo"><img src="img/logo.png" alt="로고"></div>
+    <div id="top_nav">
+      <div class="logo"><img src="img/logo.png" alt="로고"></div>
 
-            <div class="search">
-                <input type="search" value="Search">
-                <button><a href="#">찾기</a></button>
-            </div>
+      <div class="search">
+        <input type="search" value="Search">
+        <button><a href="#">찾기</a></button>
+      </div>
 
-        </div>
-
-        <div id="bottom_nav">
-            <ul class="nav">
-                <li><a href="#">대학교재</a></li>
-                <li><a href="#">초중고</a></li>
-                <li><a href="#">베스트</a></li>
-                <li><a href="#">신상품</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">사은품</a></li>
-                <li><a href="#">PICKS</a></li>
-                <li><a href="#">CASTing</a></li>
-
-            </ul>
-        </div>
-
-    </header>
-
-    <div id="slider"></div>
-
-    <div id="other">
-        <div class="box_1"></div>
-        <div class="box_1"></div>
-        <div class="box_1"></div>
-        <div class="box_1"></div>
     </div>
 
-    <div id="information">
-        <div class="box_2"></div>
-        <div class="box_2"></div>
-    </div>
+    <div id="bottom_nav">
+      <div class="nav_1">
+        <ul class="nav">
+          <li><a href="#">대학교재</a></li>
+          <li><a href="#">초중고</a></li>
+          <li><a href="#">베스트</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">사은품</a></li>
+          <li><a href="#">PICKS</a></li>
+          <li><a href="#">CASTing</a></li>
 
-    <section>
-        <h4>추천 도서</h4>
-
-        <ul id="booklist">
-            <li>문학</li>
-            <li>유아</li>
-            <li>경제</li>
         </ul>
+      </div>
+    </div>
 
-        <h6 id="titlelist">문학/인문</h6>
+  </header>
 
-        <article id="list_a" class="list">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </article>
+  <div id="slider"></div>
 
-        <article id="list_b" class="list">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </article>
+  <div id="other">
+    <div class="box_1"></div>
+    <div class="box_1"></div>
+    <div class="box_1"></div>
+    <div class="box_1"></div>
+  </div>
+
+  <div id="information">
+    <div class="box_2"></div>
+    <div class="box_2"></div>
+  </div>
+
+  <section>
+    <h1>베스트 셀러</h1>
+
+    <ul id="booklist">
+      <li>문학</li>
+      <li>유아</li>
+      <li>경제</li>
+    </ul>
+
+    <h6 id="titlelist">문학/인문</h6>
+
+    <div class="list_1">
+
+      <article id="list_a" class="list">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </article>
+
+      <article id="list_b" class="list">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </article>
 
 
-        <article id="list_c" class="list">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </article>
+      <article id="list_c" class="list">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </article>
+    </div>
 
-    </section>
+  </section>
 
-    <script>
-        $.ajax({
-          method: "GET",
-          url: "https://dapi.kakao.com/v3/search/book?target=title",
-          data: { query: "파리" },
-          headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
-        })
-          .done(function (msg) {
-    
-            const boxs = $('#list_a .box');
-    
-            for (let i = 0; i < boxs.length; i++) {
-    
-              $("#list_a >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-              $("#list_a >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-              $("#list_a >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
-    
-    
-              let str = msg.documents[i].contents;
-              let str2 = str.substring(0, 60);
-    
-              $("#list_a >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
-              $("#list_a >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
-    
-            }
-    
-          });
-    
-    
-        $.ajax({
-          method: "GET",
-          url: "https://dapi.kakao.com/v3/search/book?target=title",
-          data: { query: "유아" },
-          headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
-        })
-          .done(function (msg) {
-    
-            // for문 (8개)
-            const boxs = $('#list_b .box');
-    
-    
-            for (let i = 0; i < boxs.length; i++) {
-    
-              $("#list_b >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-              $("#list_b >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-              $("#list_b >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
-    
-    
-              let str = msg.documents[i].contents;
-              let str2 = str.substring(0, 60);
-    
-              $("#list_b >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
-              $("#list_b >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
-    
-            }
-          });
-    
-    
-        $.ajax({
-          method: "GET",
-          url: "https://dapi.kakao.com/v3/search/book?target=title",
-          data: { query: "경제" },
-          headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
-        })
-          .done(function (msg) {
-    
-            // for문 (8개)
-            const boxs = $('#list_b .box');
-    
-    
-            for (let i = 0; i < boxs.length; i++) {
-    
-              $("#list_c >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-              $("#list_c >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-              $("#list_c >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
-    
-    
-              let str = msg.documents[i].contents;
-              let str2 = str.substring(0, 60);
-    
-              $("#list_c >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
-              $("#list_c >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
-    
-            }
-    
-          });
-    
-    
-      </script>
+  <div id="banner">
+    <div class="banner_1"></div>
+  </div>
+
+  <div id="slidewrap">
+    <div class="title">
+      <h1>스테디 셀러</h1>
+    </div>
+
+    <ul class="slide">
+
+      <li>
+        <div class="book"></div>
+      </li>
+      <li>
+        <div class="book"></div>
+      </li>
+      <li>
+        <div class="book"></div>
+      </li>
+      <li>
+        <div class="book"></div>
+      </li>
+      <li>
+        <div class="book"></div>
+      </li>
+      <li>
+        <div class="book"></div>
+      </li>
+
+    </ul>
+
+    <span class="prev">&lt;</span>
+    <span class="next">&gt;</span>
+
+  </div>
+
+  <div id="week">
+    <div class="title">
+      <h1>이주의 인기</h1>
+    </div>
+    <div class="week_1"></div>
+    <div class="week_1"></div>
+    <div class="week_1"></div>
+    <div class="week_1"></div>
+  </div>
+
+
+
+  <div id="show">
+    <div class="show_1">
+      <h2>무슨 책을 찾으시나요?</h2>
+      <p>저희 한테 알려주시면 빠른시일내에 준비 하겠습니다!</p>
+      <input type="search" value="찾으시는 책을 적어주세요">
+      <button><a href="#">보내기</a></button>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer_1">
+
+      <div class="foot_1"><img src="img/logo.png"></div>
+
+      <div class="foot_2">
+        <ul class="nav_2">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">광고소개</a></li>
+          <li><a href="#">대량주문안내</a></li>
+        </ul>
+      </div>
+
+
+      <div class="foot_3">
+        <ul class="nav_3">
+          <li>대표이사 : 안병현,김상훈</li>
+          <li>대표전화 : 1544 - 1900</li>
+          <li>FAX : 0502 - 987 - 5711</li>
+          <li>사업자등록번호 : 102 - 81 - 11670</li>
+          <li>통신판매업신고번호 : 제 653호</li>
+        </ul>
+      </div>
+
+      <div class="copy">
+        <p>Copyright All Right Reseved</p>
+      </div>
+
+    </div>
+
+  </footer>
+
 
 </body>
 
