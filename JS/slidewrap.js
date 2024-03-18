@@ -12,7 +12,7 @@ $(function () {
             return;
         }
 
-        $('.slide').stop().animate({ marginLeft: -336 * page }, 800);
+        $('#slide').stop().animate({ marginLeft: -336 * page }, 800);
 
     });
 
@@ -20,13 +20,13 @@ $(function () {
 
         page++;
 
-        if (page > $('.slide li').length - 3) {
-            page = $('.slide li').length - 3;
+        if (page > $('#slide li').length - 3) {
+            page = $('#slide li').length - 3;
             // alert('마지막 이미지');
             return;
         }
 
-        $('.slide').stop().animate({ marginLeft: -336 * page }, 800);
+        $('#slide').stop().animate({ marginLeft: -336 * page }, 800);
     });
 
 
