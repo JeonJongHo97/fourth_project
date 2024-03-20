@@ -17,6 +17,7 @@
   <script src="JS/book_1.js"></script>
   <script src="JS/book_2.js"></script>
   <script src="JS/top.js"></script>
+  <script src="JS/sliderwrap.js"></script>
 
 
   <!-- CSS -->
@@ -57,7 +58,44 @@
 
   </header>
 
-  <div id="slider"></div>
+  <div id="sliderwrap">
+    <div class="slide_1">    
+      <ul>    
+        <li id="slider1">    
+          <div class="maintext">
+            <h1>Yoga Lesson</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut
+              labore et
+              dolore magna aliqua. </p>
+            <button>SHOP NOW <i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="mainimg"><img src="img/slider1.png"></div>
+    
+        </li>
+    
+        <li id="slider2">
+    
+          <div class="maintext_1">
+            <h1>Child Care Book</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut
+              labore et
+              dolore magna aliqua. </p>
+            <button>SHOP NOW <i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="mainimg"><img src="img/slider2.png"></div>
+    
+        </li>
+      </ul>
+    
+      <div id="side_nav">
+        <div id="prev"><i class="fa-solid fa-chevron-up"></i></div>
+        <div id="next"><i class="fa-solid fa-chevron-down"></i></div>
+      </div>
+    </div>
+  </div>
+
+  
+
 
   <div id="other">
 
@@ -224,9 +262,8 @@
     </div>
   </div>
 
-
-  <div class="btns">
-    <div class="move">TOP</div>
+  <div style="cursor:pointer;" onclick="window.scrollTo(0,0);" class="top">
+    <a href="#">top</a>
   </div>
 
 
