@@ -67,26 +67,40 @@ a {
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
 }
-#bottom_nav .nav_1 {
+#bottom_nav .menu {
   width: 1200px;
-  height: 50px;
   margin: 0 auto;
+  position: relative;
+  z-index: 5;
 }
-#bottom_nav .nav {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
+#bottom_nav .menu li {
+  float: left;
+  width: 200px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #fff;
 }
-#bottom_nav .nav a {
-  padding: 0 30px;
-  color: black;
-  font-weight: bold;
+#bottom_nav .menu li a {
+  color: #000000;
+}
+#bottom_nav .menu li li a:hover {
+  color: #ffffff;
+}
+#bottom_nav .menu li:hover {
+  background-color: #5084ff;
+}
+#bottom_nav .menu .sub {
+  background-color: #ddd;
+  display: none;
+}
+#bottom_nav .menu .sub li:hover {
+  background-color: rgb(107, 166, 207);
 }
 
 #sliderwrap {
   width: 100%;
   height: 600px;
-  margin: 70px auto 0;
+  margin: 50px auto 0;
   background-color: rgb(242, 242, 242);
   overflow: hidden;
 }
@@ -112,9 +126,9 @@ a {
 #sliderwrap #slider1 .maintext {
   width: 600px;
   padding: 0 15px;
-}
-#sliderwrap #slider1 .maintext img {
-  margin: 0 -90px 0 40px;
+  transform: translate(-300px);
+  opacity: 0;
+  transition: 0.8s;
 }
 #sliderwrap #slider1 .maintext h1 {
   font-size: 70px;
@@ -132,6 +146,12 @@ a {
   border: 2px solid #62ab00;
   transition: all 0.5s ease 0s;
 }
+#sliderwrap #slider1 img {
+  margin: 0 -90px 0 40px;
+  transform: translate(300px);
+  opacity: 0;
+  transition: 0.8s;
+}
 #sliderwrap #slider2 {
   height: 600px;
   display: flex;
@@ -143,28 +163,34 @@ a {
   left: 0;
   display: none;
 }
-#sliderwrap #slider2 .maintext_1 {
+#sliderwrap #slider2 .maintext {
   width: 600px;
   padding: 0 15px;
+  transform: translate(-300px);
+  opacity: 0;
+  transition: 0.8s;
 }
-#sliderwrap #slider2 .maintext_1 img {
-  margin: 0 -90px 0 40px;
-}
-#sliderwrap #slider2 .maintext_1 h1 {
+#sliderwrap #slider2 .maintext h1 {
   font-size: 70px;
 }
-#sliderwrap #slider2 .maintext_1 p {
+#sliderwrap #slider2 .maintext p {
   margin: 28px 0 36px;
 }
-#sliderwrap #slider2 .maintext_1 button {
+#sliderwrap #slider2 .maintext button {
   background: none;
   padding: 18px 30px;
 }
-#sliderwrap #slider2 .maintext_1 button:hover {
+#sliderwrap #slider2 .maintext button:hover {
   background: #62ab00;
   color: #fff;
   border: 2px solid #62ab00;
   transition: all 0.5s ease 0s;
+}
+#sliderwrap #slider2 img {
+  margin: 0 -90px 0 40px;
+  transform: translate(300px);
+  opacity: 0;
+  transition: 0.8s;
 }
 
 #side_nav {
@@ -190,6 +216,11 @@ a {
   cursor: pointer;
 }
 
+#prev_1 i {
+  color: black;
+  width: 3.5%;
+}
+
 #other {
   width: 1200px;
   height: 150px;
@@ -202,8 +233,6 @@ a {
   width: 300px;
   height: 130px;
   margin: 0 20px;
-  border: 1px solid #ccc;
-  box-shadow: 5px 5px 5px #ccc;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -349,14 +378,9 @@ section .box {
 section .box a {
   color: black;
 }
-section .box p {
-  font-size: 15px;
-  text-align: center;
-  padding-top: 30px;
-}
 section .box img {
   width: 280px;
-  height: 300px;
+  height: 330px;
 }
 section .box h3 {
   text-align: center;
@@ -368,7 +392,7 @@ section .box h6 {
 }
 section .box .btn {
   position: absolute;
-  top: 92%;
+  top: 90%;
   left: 40%;
   background-color: #5084ff;
   padding: 3px 15px;
@@ -404,41 +428,34 @@ article {
   width: 1200px;
   height: 500px;
   margin: 0 auto;
-}
-#banner .banner_1 h1 {
-  font-size: 60px;
-  font-weight: bold;
-  color: white;
-  position: absolute;
-  top: 15%;
-  left: 30%;
+  position: relative;
 }
 #banner .banner_1 p {
   font-size: 20px;
   font-weight: bold;
   color: white;
   position: absolute;
-  top: 40%;
-  left: 30%;
+  bottom: 150px;
+  left: 200px;
 }
 #banner .banner_1 a {
   color: white;
   position: absolute;
-  top: 80%;
-  left: 47%;
+  bottom: 100px;
+  left: 600px;
 }
 #banner .banner_1 .banner_img {
   width: 200px;
   position: absolute;
-  top: 17%;
-  left: 30%;
+  top: 100px;
+  left: 200px;
 }
 #banner .banner_2 {
   width: 300px;
   height: 400px;
   position: absolute;
-  top: 10%;
-  left: 55%;
+  top: 50px;
+  left: 1100px;
 }
 #banner .banner_2 img {
   width: 100%;
@@ -481,16 +498,10 @@ article {
 }
 #slidewrap #slide .book img {
   width: 270px;
-  height: 300px;
+  height: 350px;
 }
 #slidewrap #slide .book h3 {
-  padding-top: 15px;
-}
-#slidewrap #slide .book h6 {
-  padding-top: 5px;
-}
-#slidewrap #slide .book p {
-  padding-top: 10px;
+  padding-top: 30px;
 }
 #slidewrap span {
   position: absolute;

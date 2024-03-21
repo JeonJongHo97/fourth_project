@@ -18,7 +18,6 @@ $.ajax({
         let str = msg.documents[i].contents;
         let str2 = str.substring(0, 60);
 
-        $("#list_a >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
         $("#list_a >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
 
       }
@@ -48,7 +47,6 @@ $.ajax({
         let str = msg.documents[i].contents;
         let str2 = str.substring(0, 60);
 
-        $("#list_b >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
         $("#list_b >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
 
       }
@@ -77,7 +75,6 @@ $.ajax({
         let str = msg.documents[i].contents;
         let str2 = str.substring(0, 60);
 
-        $("#list_c >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
         $("#list_c >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
 
       }

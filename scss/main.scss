@@ -63,32 +63,51 @@
     border-top: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
 
-    .nav_1 {
+    .menu {
         width: 1200px;
-        height: 50px;
         margin: 0 auto;
-    }
+        position: relative;
+        z-index: 5;
 
-    .nav {
-        display: flex;
-        justify-content: center;
-        padding-top: 10px;
+        li {
+            float: left;
+            width: 200px;
+            line-height: 45px;
+            text-align: center;
+            background-color: #fff;
 
-        a {
-            padding: 0 30px;
-            color: black;
-            font-weight: bold;
+            a {
+                color: #000000;
+            }
+            li a:hover {
+                color: #ffffff;
+            }
+
         }
-    }
+        
+        li:hover {
+            background-color:#5084ff;
+        }
 
+        .sub {
+            background-color: #ddd;
+            display: none;
+
+            li:hover {
+                background-color: rgb(107, 166, 207);
+            }
+        }
+
+    }
 }
 
 #sliderwrap {
     width: 100%;
     height: 600px;
-    margin: 70px auto 0;
+    margin: 50px auto 0;
     background-color: rgb(242, 242, 242);
     overflow: hidden;
+
 
     .slide_1 {
         width: 1200px;
@@ -114,10 +133,11 @@
         .maintext {
             width: 600px;
             padding: 0 15px;
+            transform: translate(-300px);
+            opacity: 0;
+            transition: 0.8s;
 
-            img {
-                margin: 0 -90px 0 40px;
-            }
+            
 
             h1 {
                 font-size: 70px;
@@ -141,6 +161,13 @@
             }
 
         }
+        img {
+            margin: 0 -90px 0 40px;
+            transform: translate(300px);
+        opacity: 0;
+        transition: 0.8s;
+        }
+
     }
 
     #slider2 {
@@ -154,13 +181,14 @@
         left: 0;
         display: none;
 
-        .maintext_1 {
+        .maintext {
             width: 600px;
             padding: 0 15px;
+            transform: translate(-300px);
+            opacity: 0;
+            transition: 0.8s;
 
-            img {
-                margin: 0 -90px 0 40px;
-            }
+
 
             h1 {
                 font-size: 70px;
@@ -184,6 +212,13 @@
             }
 
         }
+
+        img {
+            margin: 0 -90px 0 40px;
+            transform: translate(300px);
+            opacity: 0;
+            transition: 0.8s;
+        }
     }
 }
 
@@ -194,6 +229,7 @@
     bottom: 0;
     left: -100px;
 
+
     div {
         width: 50px;
         height: 50px;
@@ -201,6 +237,8 @@
         background: white;
         border-radius: 50px;
         border: 2px solid #eee;
+
+        
     }
 
     div:hover {
@@ -224,8 +262,6 @@
         width: 300px;
         height: 130px;
         margin: 0 20px;
-        border: 1px solid #ccc;
-        box-shadow: 5px 5px 5px #ccc;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -398,15 +434,9 @@ section {
             color: black;
         }
 
-        p {
-            font-size: 15px;
-            text-align: center;
-            padding-top: 30px;
-        }
-
         img {
             width: 280px;
-            height: 300px;
+            height: 330px;
         }
 
         h3 {
@@ -421,7 +451,7 @@ section {
 
         .btn {
             position: absolute;
-            top: 92%;
+            top: 90%;
             left: 40%;
             background-color: #5084ff;
             padding: 3px 15px;
@@ -462,38 +492,29 @@ article {
         width: 1200px;
         height: 500px;
         margin: 0 auto;
-
-
-        h1 {
-            font-size: 60px;
-            font-weight: bold;
-            color: white;
-            position: absolute;
-            top: 15%;
-            left: 30%;
-        }
+        position: relative;
 
         p {
             font-size: 20px;
             font-weight: bold;
             color: white;
             position: absolute;
-            top: 40%;
-            left: 30%;
+            bottom: 150px;
+            left: 200px;
         }
 
         a {
             color: white;
             position: absolute;
-            top: 80%;
-            left: 47%;
+            bottom: 100px;
+            left: 600px;
         }
 
         .banner_img {
             width: 200px;
             position: absolute;
-            top: 17%;
-            left: 30%;
+            top: 100px;
+            left: 200px;
         }
     }
 
@@ -501,8 +522,8 @@ article {
         width: 300px;
         height: 400px;
         position: absolute;
-        top: 10%;
-        left: 55%;
+        top: 50px;
+        left: 1100px;
 
         img {
             width: 100%;
@@ -548,20 +569,15 @@ article {
 
             img {
                 width: 270px;
-                height: 300px;
+                height: 350px;
             }
 
             h3 {
-                padding-top: 15px;
+                padding-top: 30px;
             }
 
-            h6 {
-                padding-top: 5px;
-            }
 
-            p {
-                padding-top: 10px;
-            }
+
 
         }
     }

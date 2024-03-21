@@ -20,13 +20,11 @@ $(function () {
 
                 $('.book').eq(i).append("<img src='" + msg.documents[1].thumbnail + "'/>");
                 $('.book').eq(i).append("<h3>" + msg.documents[1].title + "</h3>");
-                $('.book').eq(i).append("<h6>" + msg.documents[1].authors + "</h6>");
 
 
                 let str = msg.documents[1].contents;
                 let str2 = str.substring(0, 60);
 
-                $('.book').eq(i).append("<p>" + str2 + "</p>");
             });
     }
 });
