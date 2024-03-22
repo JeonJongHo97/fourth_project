@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>교보문고</title>
+  <link href="img/favicon_256x256.png" rel="shortcut icon" type="image/x-icon">
 
   <!-- JQUERY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -19,10 +20,14 @@
   <script src="JS/top.js"></script>
   <script src="JS/sliderwrap.js"></script>
   <script src="JS/menu.js"></script>
+  <script src="JS/week_1.js"></script>
+  <script src="JS/login.js"></script>
 
 
   <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
+  
 
 
 
@@ -35,8 +40,27 @@
       <div class="logo"><img src="img/logo.png" alt="로고"></div>
 
       <div class="search">
-        <input type="search" value="Search">
+        <input type="search" value="찾으시는 책을 적어주세요.">
         <button><a href="#">찾기</a></button>
+      </div>
+
+      <div class="login">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <i class="fa-solid fa-gear" id="gear_logo">
+          <div id="gear" style="display: none;">
+            <div><h4>로그인</h4></div>
+            <ul>
+                <li>나의 정보</li>
+                <li>회원 가입</li>
+                <li>로그 아웃</li>
+            </ul>
+            <div><h4>고객 센터</h4></div>
+            <ul>
+                <li>교보 문고</li>
+                <li>찾아 오시는길</li>
+            </ul>
+        </div>
+        </i>
       </div>
 
     </div>
@@ -105,12 +129,10 @@
         <li id="slider1">    
           <div class="maintext">
             <h1>Yoga Lesson</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut
-              labore et
-              dolore magna aliqua. </p>
-            <button>SHOP NOW <i class="fa-solid fa-cart-shopping"></i></button>
+            <p>몸·마음 건강해지는 ‘리듬체조 소도구’ 이용한 요가…‘리드믹 요가’ 시리즈 [신간소개] </p>
+            <button>사러가기..<i class="fa-solid fa-cart-shopping"></i></button>
           </div>
-          <div class="mainimg"><img src="img/slider1.png"></div>
+          <div class="mainimg"><img src="img/slider1.png" alt="slider1"></div>
     
         </li>
     
@@ -118,12 +140,10 @@
     
           <div class="maintext">
             <h1>Child Care Book</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut
-              labore et
-              dolore magna aliqua. </p>
-            <button>SHOP NOW <i class="fa-solid fa-cart-shopping"></i></button>
+            <p>좋은책어린이, '어린이 날'을 기념하여 어린이 추천 도서 소개</p>
+            <button>사러가기..<i class="fa-solid fa-cart-shopping"></i></button>
           </div>
-          <div class="mainimg"><img src="img/slider2.png"></div>
+          <div class="mainimg"><img src="img/slider2.png" alt="slider2"></div>
     
         </li>
       </ul>
@@ -145,8 +165,8 @@
         <img src="img/icon01_small.png" alt="icon1">
       </div>
       <div class="icon_1">
-        <h4>Quick Delivery</h4>
-        <p>Mast product are free shipping</p>
+        <h4>빠른 배송</h4>
+        <p>교보문고 제품은 <br>언제나 무료배송</p>
       </div>
     </div>
 
@@ -155,8 +175,8 @@
         <img src="img/icon02_small.png" alt="icon2">
       </div>
       <div class="icon_1">
-        <h4>Pay with Easy</h4>
-        <p>Most product are free shipping</p>
+        <h4>간편 결제</h4>
+        <p>간편하게 결제</p>
       </div>
     </div>
 
@@ -165,8 +185,8 @@
         <img src="img/icon03_small.png" alt="icon3">
       </div>
       <div class="icon_1">
-        <h4>Best Deal</h4>
-        <p>Most product are free shipping</p>
+        <h4>베스트 딜</h4>
+        <p>합리적인 가격</p>
       </div>
     </div>
 
@@ -175,8 +195,9 @@
         <img src="img/icon04_small.png" alt="icon4">
       </div>
       <div class="icon_1">
-        <h4>Secured Payment</h4>
-        <p>Most product are free shipping</p>
+        <h4>중고 서적</h4>
+        <p>중고서적도<br>
+        언제나 깨끗하게</p>
       </div>
     </div>
 
@@ -232,7 +253,7 @@
   </section>
 
   <div id="banner">
-    <div class="banner_1">
+    <div id="banner_1">
       <div class="banner_img">
         <img src="img/welcome.png" alt="welcome">
       </div>
@@ -243,9 +264,10 @@
         by 교보문고
       </p>
       <a href="#">더보기..</a>
-    </div>
-    <div class="banner_2">
-      <img src="img/H마트에서 울다.jpg" alt="book">
+
+      <div class="banner_2">
+        <img src="img/H마트에서 울다.jpg" alt="book">
+      </div>
     </div>
   </div>
 
@@ -286,10 +308,42 @@
     <div class="title">
       <h1>이주의 인기</h1>
     </div>
-    <div class="week_1"></div>
-    <div class="week_1"></div>
-    <div class="week_1"></div>
-    <div class="week_1"></div>
+
+    <div class="week_1">
+      <div class="part_img">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-rotate"></i>
+          <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+    </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+    </div>
+    </div>
+    
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+    </div>
+    </div>
   </div>
 
 
@@ -303,7 +357,7 @@
     </div>
   </div>
 
-  <div style="cursor:pointer;" onclick="window.scrollTo(0,0);" class="top">
+  <div style="cursor:pointer;" class="top">
     <a href="#">top</a>
   </div>
 
@@ -313,7 +367,7 @@
   <footer>
     <div id="footer_1">
 
-      <div class="foot_1"><img src="img/logo.png"></div>
+      <div class="foot_1"><img src="img/logo.png" alt="logo"></div>
 
       <div class="foot_2">
         <ul class="nav_2">
