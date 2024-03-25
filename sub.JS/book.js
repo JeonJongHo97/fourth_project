@@ -1,7 +1,7 @@
 $(function () {
 
 
-    let search = ["인생", "동물", "성장", "아이돌"];
+    let search = ["현명", "연애", "마음", "아픔","주식","코인","행복","운동"];
 
     for (let i = 0; i < search.length; i++) {
 
@@ -21,7 +21,7 @@ $(function () {
 
                 let str = msg.documents[1].contents;
                 let str2 = str.substring(0, 60);
-
+                
             });
     }
 });

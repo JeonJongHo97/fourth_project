@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교보문고</title>
+  <link href="img/favicon_256x256.png" rel="shortcut icon" type="image/x-icon">
+
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <!-- JS -->
+  <script src="sub.JS/login.js"></script>
+  <script src="sub.JS/menu.js"></script>
+  <script src="sub.JS/book.js"></script>
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/sub.css">
+
+
+</head>
+
+<body>
+  <header>
+    <div id="top_nav">
+      <div class="logo"><img src="img/logo.png" alt="로고"></div>
+
+      <div class="search">
+        <input type="search" value="찾으시는 책을 적어주세요.">
+        <button><a href="#">찾기</a></button>
+      </div>
+
+      <div class="login">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <i class="fa-solid fa-gear" id="gear_logo">
+          <div id="gear" style="display: none;">
+            <div>
+              <h4>로그인</h4>
+            </div>
+            <ul>
+              <li>나의 정보</li>
+              <li>회원 가입</li>
+              <li>로그 아웃</li>
+            </ul>
+            <div>
+              <h4>고객 센터</h4>
+            </div>
+            <ul>
+              <li>교보 문고</li>
+              <li>찾아 오시는길</li>
+            </ul>
+          </div>
+        </i>
+      </div>
+
+    </div>
+
+    <div id="bottom_nav">
+
+      <ul class="menu">
+
+        <li><a href="#">베스트</a>
+
+          <ul class="sub">
+
+            <li><a href="#">종합 베스트</a></li>
+            <li><a href="#">온라인 베스트</a></li>
+            <li><a href="#">스테디 셀러</a></li>
+
+          </ul>
+
+        </li>
+
+        <li><a href="#">신상품</a>
+
+          <ul class="sub">
+
+            <li><a href="#">국내도서</a></li>
+            <li><a href="#">외국도서</a></li>
+            <li><a href="#">E-Book</a></li>
+          </ul>
+
+        </li>
+
+        <li><a href="#">초.중.고</a>
+
+          <ul class="sub">
+
+            <li><a href="#">초등학생</a></li>
+            <li><a href="#">중학생</a></li>
+            <li><a href="#">고등학생</a></li>
+
+          </ul>
+        </li>
+
+        <li><a href="#">대학교재</a>
+
+          <ul class="sub">
+
+            <li><a href="#">인문</a></li>
+            <li><a href="#">컴퓨터</a></li>
+            <li><a href="#">전문사전</a></li>
+
+          </ul>
+        </li>
+
+        <li><a href="#">이벤트</a></li>
+
+        <li><a href="#">CASTing</a></li>
+      </ul>
+
+    </div>
+
+  </header>
+
+  <div id="main">
+
+    <div class="main_1"></div>
+
+    <div class="main_2">
+      <div id="book_title">
+        <h2>고층 입원실의 갱스터 할머니</h2>
+        <div class="buy">
+          <span class="persent">10%</span>
+          <span class="price">16,920원</span>
+          <span class="sale">18,800</span>
+        </div>
+        <ul>
+
+          <li>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </li>
+
+          <li>3 reviews</li>
+
+        </ul>
+
+        <p>“다행인 것은 이제 환자라는 걸 즐기는 지경까지 왔다는 것이다”
+          100만 크리에이터 ‘빵먹다살찐떡’, 양유진이 처음 고백하는 난치병 ‘루푸스’ 투병
+          오롯한 진심으로 당신에게 건네는 유쾌하고 담백한 응원</p>
+      </div>
+      <ul id="book_table">
+        <li>
+            <span>Book Name</span>
+            <span class="Book_Name"></span>
+        </li>
+        <li>
+            <span>Author Name</span>
+            <span class="Author_Name"></span>
+        </li>
+        <li>
+            <span>Publisher</span>
+            <span class="publisher"></span>
+        </li>
+        <li>
+            <span>Date Time</span>
+            <span class="datetime"></span>
+        </li>
+    </ul>
+
+    <div id="number">
+      <div id="up_down">
+          <div id="down">-</div>
+          <input type="text" value="1">
+          <div id="up">+</div>
+      </div>
+
+      <button>ADD TO CART</button>
+
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-rotate"></i>   
+    </div>
+
+    <button id="sell">구매하기</button>
+
+    </div>
+
+  </div>
+
+  <div id="detail"></div>
+
+
+
+
+  <div id="week">
+    <div class="title">
+      <h1></h1>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+  </div>
+
+  <div id="week">
+    <div class="title">
+      <h1></h1>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+
+    <div class="week_1">
+      <div class="part_img">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div id="footer_1">
+
+      <div class="foot_1"><img src="img/logo.png" alt="logo"></div>
+
+      <div class="foot_2">
+        <ul class="nav_2">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">광고소개</a></li>
+          <li><a href="#">대량주문안내</a></li>
+        </ul>
+      </div>
+
+
+      <div class="foot_3">
+        <ul class="nav_3">
+          <li>대표이사 : 안병현,김상훈</li>
+          <li>대표전화 : 1544 - 1900</li>
+          <li>FAX : 0502 - 987 - 5711</li>
+          <li>사업자등록번호 : 102 - 81 - 11670</li>
+          <li>통신판매업신고번호 : 제 653호</li>
+        </ul>
+      </div>
+
+      <div class="copy">
+        <p>Copyright All Right Reseved</p>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
