@@ -127,7 +127,7 @@
         <div class="buy">
           <span class="persent">10%</span>
           <span class="price">16,920원</span>
-          <span class="sale">18,800</span>
+          <span class="sale">18,800원</span>
         </div>
         <ul>
 
@@ -143,49 +143,66 @@
 
         </ul>
 
-        <p>“다행인 것은 이제 환자라는 걸 즐기는 지경까지 왔다는 것이다”
-          100만 크리에이터 ‘빵먹다살찐떡’, 양유진이 처음 고백하는 난치병 ‘루푸스’ 투병
+        <p>“다행인 것은 이제 환자라는 걸 즐기는 지경까지 왔다는 것이다”<br>
+          양유진이 처음 고백하는 난치병 ‘루푸스’ 투병<br>
           오롯한 진심으로 당신에게 건네는 유쾌하고 담백한 응원</p>
       </div>
+
       <ul id="book_table">
         <li>
-            <span>Book Name</span>
-            <span class="Book_Name"></span>
+          <span>책 이름</span>
+          <span class="Book_Name">고층 입원실의 갱스터 할머니</span>
         </li>
         <li>
-            <span>Author Name</span>
-            <span class="Author_Name"></span>
+          <span>저자(글)</span>
+          <span class="Author_Name">양유진</span>
         </li>
         <li>
-            <span>Publisher</span>
-            <span class="publisher"></span>
+          <span>출판사</span>
+          <span class="publisher">21세기 북스</span>
         </li>
         <li>
-            <span>Date Time</span>
-            <span class="datetime"></span>
+          <span>발행(출시)일자</span>
+          <span class="datetime">2024년 03월 20일</span>
         </li>
-    </ul>
+      </ul>
 
-    <div id="number">
-      <div id="up_down">
-          <div id="down">-</div>
-          <input type="text" value="1">
-          <div id="up">+</div>
+
+      <div id="number">
+
+        <div id="up_down">
+          <input type="number" value="1">
+        </div>
+
+        <button>ADD TO CART</button>
+
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-rotate"></i>
+
       </div>
 
-      <button>ADD TO CART</button>
-
-      <i class="fa-regular fa-heart"></i>
-      <i class="fa-solid fa-rotate"></i>   
-    </div>
-
-    <button id="sell">구매하기</button>
+      <button id="sell">구매하기</button>
 
     </div>
 
   </div>
 
-  <div id="detail"></div>
+  <div id="notice">
+    <ul>
+      <li id="tab_menu active">책 소개</li>
+      <li id="tab_menu">작가 정보</li>
+      <li id="tab_menu">목차</li>
+      <li id="tab_menu">추천사</li>
+      <li id="tab_menu">리뷰</li>
+    </ul>
+    <div class="tab_list">
+      <div class="tab_sub">내용을 적으시오1.</div>
+      <div class="tab_sub">내용을 적으시오2.</div>
+      <div class="tab_sub">내용을 적으시오3.</div>
+      <div class="tab_sub">내용을 적으시오4.</div>
+      <div class="tab_sub">내용을 적으시오5.</div>
+    </div>
+  </div>
 
 
 
@@ -309,6 +326,19 @@
     </div>
 
   </footer>
+
+  <script>
+    
+    $(document).ready(function(){
+        $('.tab_menu').click(function(){
+          let index = $(this).index();
+
+
+          $('.tab_sub').eq(index).show().siblings().hide();
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+  </script>
 
 
 </body>

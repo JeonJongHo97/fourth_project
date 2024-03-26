@@ -121,7 +121,6 @@
     .menu {
         width: 1200px;
         margin: 0 auto;
-        position: relative;
         z-index: 5;
 
         li {
@@ -130,11 +129,14 @@
             line-height: 45px;
             text-align: center;
             background-color: #fff;
+            position: relative;
 
             a {
                 color: #000000;
                 font-size: 18px;
                 font-weight: 500;
+
+                
             }
             a:hover {
                 color: #ffffff;
@@ -144,11 +146,16 @@
         
         li:hover {
             background-color:#5084ff;
+            border-bottom: 2px solid #ccc;
+
         }
 
         .sub {
             background-color: #ddd;
             display: none;
+            position: absolute;
+            top: 48px;
+            left: 0;
 
             li:hover {
                 background-color: rgb(107, 166, 207);
@@ -160,7 +167,7 @@
 
 #main {
     width: 1200px;
-    height: 600px;
+    height: 650px;
     background-color: #6493ff;
     margin: 30px auto 0;
     display: flex;
@@ -168,60 +175,165 @@
     align-items: center;
     
     .main_1 {
-        width: 400px;
-        height: 500px;
+        width: 500px;
+        height: 600px;
         background-color: #ccc;
     }
 
     .main_2 {
         width: 600px;
-        height: 500px;
+        height: 600px;
         background-color: #fff;
 
         #book_title {
-            width: 400px;
+            width: 500px;
             margin: 20px 50px;
-            background-color: #6493ff;
+
+            h2 {
+                padding-top: 10px;
+                font-size: 35px;
+            }
+
+            .buy {
+                padding-top: 5px;
+
+                .persent {
+                    color: #2e65e4;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .price {
+                    color: black;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .sale {
+                    text-decoration: line-through;
+                }
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    color: rgb(255, 222, 32);
+                    font-size: 20px;
+                    padding-top: 10px;
+                }
+            }
+
+            p {
+                padding-top: 20px;
+            }
+
         }
 
         #book_table {
-            width: 400px;
-            background-color: #6493ff;
-            margin: 20px 50px ;
+            font-size: 15px;
+            width: 500px;
+            margin: 0 auto;
+
+            li {
+                border: 1px solid #ccc;
+                padding: 5px;
+                border-bottom: none;
+                line-height: 25px;
+
+                span {
+                    padding: 5px;
+                }
+
+                span:first-child {
+                    border-right: 1px solid #ccc;
+                    padding: 5px;
+                    width: 170px;
+                    display: inline-block;
+                    
+                }
+            }
+
+            li:last-child {
+                border-bottom: 1px solid #ccc;
+            }
         }
+
+
+
 
         #number {
             width: 400px;
-            background-color: #6493ff;
             display: flex;
+            align-items: center;
             margin: 20px 50px;
+            background-color: #6493ff;
 
             #up_down {
-                width: 200px;
-                height: 50px;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-
-                input {
-                    padding: 7px 3px;
-                }
+                height: 50px;
             }
         }
+
 
         #sell {
             width: 300px;
             height: 50px;
-            margin: 20px 50px;
+            margin: 0px 50px;
+            background-color: #eaeaea;
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            border: 2px solid #e6e6e6;
+        }
+
+        #sell:hover {
+            cursor: pointer;
+            background-color: #2e65e4;
+            color: white;
         }
     }
 }
 
-#detail {
+#notice {
     width: 1200px;
-    height: 600px;
-    background-color: cadetblue;
-    margin: 50px auto 0;
+    height: 800px;
+    background-color: #ccc;
+    margin: 100px auto 0;
+
+    ul {
+        width: 100%;
+        height: 50px;
+        background-color: #809fe9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+
+        li {
+            width: 240px;
+            height: 50px;
+            border: 2px solid black;
+            padding-top: 12px;
+            padding-left: 90px;
+        }
+    }
+
+    .active {
+        background-color: tomato;
+        color: white;
+    }
+
+    .tab_list {
+        width: 1200px;
+        height: 750px;
+        background-color: bisque;
+        text-align: center;
+
+        .tab_sub:not(:first-of-type) {
+            display: none;
+        }
+    }
 }
 
 #week {
