@@ -85,13 +85,14 @@
                 width: 250px;
                 border-bottom: 2px solid rgb(255, 255, 255);
                 margin-left: 20px;
+
                 h4 {
                     font-size: 20px;
                     padding: 30px 0 10px 10px;
                     letter-spacing: 2px;
                 }
             }
-            
+
 
             ul {
                 font-weight: 100;
@@ -111,6 +112,7 @@
 
 
 }
+
 #bottom_nav {
     width: 100%;
     height: 50px;
@@ -130,22 +132,25 @@
             text-align: center;
             background-color: #fff;
             position: relative;
+            z-index: 10;
+
 
             a {
                 color: #000000;
                 font-size: 18px;
                 font-weight: 500;
 
-                
+
             }
+
             a:hover {
                 color: #ffffff;
             }
 
         }
-        
+
         li:hover {
-            background-color:#5084ff;
+            background-color: #5084ff;
             border-bottom: 2px solid #ccc;
 
         }
@@ -168,17 +173,74 @@
 #main {
     width: 1200px;
     height: 650px;
-    background-color: #6493ff;
     margin: 30px auto 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
-    .main_1 {
+
+    .book_cover {
         width: 500px;
         height: 600px;
-        background-color: #ccc;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+
+        .turn_img {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            transition: 0.5s;
+            transform-style: preserve-3d;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+
+            }
+
+        }
+
+
+        .turn_img:hover {
+            transform: rotateY(35deg);
+            cursor: url(../sub_IMG/ico_flip.svg), pointer !important;
+        }
+
+        .turn_img::before {
+            content: "";
+            width: 62px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(../sub_IMG/옆면.jpg);
+            background-size: cover;
+            transform-origin: left;
+            transform: rotateY(90deg);
+        }
+
+        .turn_img::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(../sub_IMG/뒷면.jpg);
+            background-size: cover;
+            background-position: center;
+            transform-origin: center;
+            transform: rotateY(180deg) translateZ(61px);
+
+
+        }
+
     }
+
+
 
     .main_2 {
         width: 600px;
@@ -250,7 +312,7 @@
                     padding: 5px;
                     width: 170px;
                     display: inline-block;
-                    
+
                 }
             }
 
@@ -263,16 +325,40 @@
 
 
         #number {
-            width: 400px;
+            width: 500px;
             display: flex;
             align-items: center;
             margin: 20px 50px;
-            background-color: #6493ff;
 
-            #up_down {
-                display: flex;
+            .plus {
+                width: 250px;
                 height: 50px;
+                font-size: 30px;
+                text-align: center;
+                border-radius: 5px;
             }
+
+            button {
+                padding: 16px 20px;
+                margin: 0 10px;
+                background-color: #ccc;
+                border: #eee;
+                letter-spacing: 2px;
+                border-radius: 5px;
+            }
+
+            button:hover {
+                background-color: #2e65e4;
+                color: white;
+                font-weight: bold;
+            }
+
+            i {
+                font-size: 30px;
+                padding: 0 7px;
+            }
+
+
         }
 
 
@@ -285,6 +371,7 @@
             font-weight: bold;
             letter-spacing: 5px;
             border: 2px solid #e6e6e6;
+            border-radius: 5px;
         }
 
         #sell:hover {
@@ -304,7 +391,7 @@
     ul {
         width: 100%;
         height: 50px;
-        background-color: #809fe9;
+        background-color: #e7e7e7;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -313,27 +400,51 @@
         li {
             width: 240px;
             height: 50px;
-            border: 2px solid black;
+            border: 1px solid rgb(0, 0, 0);
             padding-top: 12px;
             padding-left: 90px;
         }
     }
 
-    .active {
-        background-color: tomato;
-        color: white;
-    }
 
     .tab_list {
         width: 1200px;
         height: 750px;
-        background-color: bisque;
+        background-color: rgb(246, 245, 245);
         text-align: center;
+        display: block;
 
-        .tab_sub:not(:first-of-type) {
+        .tab_sub1 {
             display: none;
         }
+
+        .tab_sub2 {
+            display: none;
+        }
+
+        .tab_sub3 {
+            display: none;
+        }
+
+        .tab_sub4 {
+            display: none;
+        }
+
+        .tab_sub5 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .review {
+                width: 800px;
+                height: 150px;
+                border: 2px solid #ccc;
+                margin-top: 20px;
+            }
+        }
     }
+
 }
 
 #week {
@@ -379,8 +490,8 @@
             display: flex;
             flex-direction: column;
             transform: translateX(-40px);
-                transition: 1s;
-                opacity: 0;
+            transition: 1s;
+            opacity: 0;
 
             i {
                 padding: 15px;
@@ -389,7 +500,7 @@
                 background-color: #f7f7f7;
                 opacity: 0.9;
                 border-radius: 50px;
-                
+
             }
         }
 

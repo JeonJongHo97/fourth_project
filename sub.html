@@ -15,6 +15,8 @@
   <script src="sub.JS/login.js"></script>
   <script src="sub.JS/menu.js"></script>
   <script src="sub.JS/book.js"></script>
+  <script src="sub.JS/Tab.js"></script>
+  <script src="sub.JS/turn_img.js"></script>
 
 
   <!-- CSS -->
@@ -119,7 +121,9 @@
 
   <div id="main">
 
-    <div class="main_1"></div>
+    <div class="book_cover">
+      <div class="turn_img"><img src="sub_IMG/앞면.jpg" alt="앞면"></div>
+    </div>
 
     <div class="main_2">
       <div id="book_title">
@@ -170,11 +174,9 @@
 
       <div id="number">
 
-        <div id="up_down">
-          <input type="number" value="1">
-        </div>
+          <input type="number" value="1" class="plus">
 
-        <button>ADD TO CART</button>
+        <button>장바구니</button>
 
         <i class="fa-regular fa-heart"></i>
         <i class="fa-solid fa-rotate"></i>
@@ -188,19 +190,34 @@
   </div>
 
   <div id="notice">
+
     <ul>
-      <li id="tab_menu active">책 소개</li>
-      <li id="tab_menu">작가 정보</li>
-      <li id="tab_menu">목차</li>
-      <li id="tab_menu">추천사</li>
-      <li id="tab_menu">리뷰</li>
+      <li class="tab_menu1">책 소개</li>
+      <li class="tab_menu2">작가 정보</li>
+      <li class="tab_menu3">목차</li>
+      <li class="tab_menu4">추천평</li>
+      <li class="tab_menu5">리뷰</li>
     </ul>
+
     <div class="tab_list">
-      <div class="tab_sub">내용을 적으시오1.</div>
-      <div class="tab_sub">내용을 적으시오2.</div>
-      <div class="tab_sub">내용을 적으시오3.</div>
-      <div class="tab_sub">내용을 적으시오4.</div>
-      <div class="tab_sub">내용을 적으시오5.</div>
+      
+      <div class="tab_sub1">1</div>
+
+      <div class="tab_sub2">2</div>
+
+      <div class="tab_sub3">3</div>
+
+      <div class="tab_sub4">4</div>
+
+      <div class="tab_sub5">
+        <div class="review">
+          <i class="fa-solid fa-thumbtack"></i>
+        </div>
+        <div class="review"></div>
+        <div class="review"></div>
+        <div class="review"></div>
+      </div>
+
     </div>
   </div>
 
@@ -209,7 +226,7 @@
 
   <div id="week">
     <div class="title">
-      <h1></h1>
+      <h1>이 책과 함께 둘러본 책</h1>
     </div>
 
     <div class="week_1">
@@ -251,7 +268,7 @@
 
   <div id="week">
     <div class="title">
-      <h1></h1>
+      <h1>이 주의 인기</h1>
     </div>
 
     <div class="week_1">
@@ -326,19 +343,6 @@
     </div>
 
   </footer>
-
-  <script>
-    
-    $(document).ready(function(){
-        $('.tab_menu').click(function(){
-          let index = $(this).index();
-
-
-          $('.tab_sub').eq(index).show().siblings().hide();
-          $(this).addClass("active").siblings().removeClass("active");
-        });
-      });
-  </script>
 
 
 </body>
