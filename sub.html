@@ -15,8 +15,9 @@
   <script src="sub.JS/login.js"></script>
   <script src="sub.JS/menu.js"></script>
   <script src="sub.JS/book.js"></script>
-  <script src="sub.JS/Tab.js"></script>
+  <script src="JS/week_1.js"></script>
   <script src="sub.JS/turn_img.js"></script>
+  <script src="sub.JS/Tab.js"></script>
 
 
   <!-- CSS -->
@@ -29,7 +30,7 @@
 <body>
   <header>
     <div id="top_nav">
-      <div class="logo"><img src="img/logo.png" alt="로고"></div>
+      <a href="index.html"><div class="logo"><img src="img/logo.png" alt="로고" ></div></a>
 
       <div class="search">
         <input type="search" value="찾으시는 책을 적어주세요.">
@@ -189,33 +190,144 @@
 
   </div>
 
-  <div id="notice">
+  <div id="introduce">
 
-    <ul>
-      <li class="tab_menu1">책 소개</li>
-      <li class="tab_menu2">작가 정보</li>
-      <li class="tab_menu3">목차</li>
-      <li class="tab_menu4">추천평</li>
-      <li class="tab_menu5">리뷰</li>
-    </ul>
+    <div class="info_menu">
 
-    <div class="tab_list">
-      
-      <div class="tab_sub1">1</div>
+      <div class="infoMenu active">목차</div>
+      <div class="infoMenu">작가정보</div>
+      <div class="infoMenu">책소개</div>
+      <div class="infoMenu">리뷰</div>
 
-      <div class="tab_sub2">2</div>
+    </div>
 
-      <div class="tab_sub3">3</div>
+    <div id="bookInfo_box">
 
-      <div class="tab_sub4">4</div>
-
-      <div class="tab_sub5">
-        <div class="review">
-          <i class="fa-solid fa-thumbtack"></i>
+      <div class="bookInfo">
+        <div id="detail"></div>
+      </div>
+      <div class="bookInfo">
+        <div id="bookIntro"></div>
+      </div>
+      <div class="bookInfo">
+        <div id="basicsInfo"></div>
+      </div>
+      <div class="bookInfo">
+        <div class="comment">
+          <input type="text" placeholder="리뷰를 등록해주세요.">
+          <a class="comment_a" href="#">등록</a>
         </div>
-        <div class="review"></div>
-        <div class="review"></div>
-        <div class="review"></div>
+
+        <div class="review">
+          <div class="star">
+            <ul>
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </li>
+            </ul>
+          </div>
+          <h3>동그랑 땡</h3>
+          <p>읽기 고민한다면 읽어보시라 권하고 싶네요
+            오랜만에 재밌게 읽은 따뜻한 이야기였습니다.</p>
+            <div class="data">
+              <h4>2024-04-01</h4>
+            </div>
+        </div>
+
+        <div class="review">
+          <div class="star">
+            <ul>
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </li>
+            </ul>
+          </div>
+          <h3>사랑아이</h3>
+          <p>요즘 자존감이 너무 낮아지고, 세상 혼자 인 것 같아서 책으로 위로 받을라고 샀어요 잘 읽고 다시 씩씩하게 살겁니댜!!</p>
+            <div class="data">
+              <h4>2023-12-25</h4>
+            </div>
+        </div>
+        <div class="review">
+          <div class="star">
+            <ul>
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </li>
+            </ul>
+          </div>
+          <h3>노나현</h3>
+          <p>힘들었던 이야기를 말해줘서 고마워요. 영상을 볼때마다 웃음과 힘을 줘서 고마워요. 원숭이 그자체여서 고마워요.</p>
+            <div class="data">
+              <h4>2023-11-27</h4>
+            </div>
+        </div>
+        <div class="review">
+          <div class="star">
+            <ul>
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </li>
+            </ul>
+          </div>
+          <h3>movie648</h3>
+          <p>내용이 재밌어서 단숨에 읽었어요 처음 접해보는 작가님 인데 다음 작품도 기대되요</p>
+            <div class="data">
+              <h4>2024-01-21</h4>
+            </div>
+        </div>
+        <div class="review">
+          <div class="star">
+            <ul>
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </li>
+            </ul>
+          </div>
+          <h3>꼬마 모모</h3>
+          <p>진짜 생각보다 더 멋진 사람이네요. 이 책을 읽고 저도 잘 버텨서 이겨낼꼐영</p>
+            <div class="data">
+              <h4>2023-07-21</h4>
+            </div>
+        </div>
+        <div class="review">
+          <div class="star">
+            <ul>
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </li>
+            </ul>
+          </div>
+          <h3>세수롱맨</h3>
+          <p>힘들어도 살아가는 유진언니 덕분에 저도 하루하루 더 살아갈 힘을 얻었어요 고마워요</p>
+            <div class="data">
+              <h4>2024-02-09</h4>
+            </div>
+        </div>
       </div>
 
     </div>
@@ -226,7 +338,7 @@
 
   <div id="week">
     <div class="title">
-      <h1>이 책과 함께 둘러본 책</h1>
+      <h1>관련 서적</h1>
     </div>
 
     <div class="week_1">

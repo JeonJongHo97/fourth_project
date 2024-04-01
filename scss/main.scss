@@ -65,7 +65,7 @@
         top: 60px;
         right: -70px;
         color: #2e65e4;
-        z-index: 6;
+        z-index: 12;
 
         i {
             font-size: 30px;
@@ -124,7 +124,7 @@
         width: 1200px;
         margin: 0 auto;
         position: relative;
-        z-index: 5;
+        z-index: 10;
 
         li {
             float: left;
@@ -151,6 +151,7 @@
         .sub {
             background-color: #ddd;
             display: none;
+            
 
             li:hover {
                 background-color: rgb(107, 166, 207);

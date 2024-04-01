@@ -1,10 +1,29 @@
-$(function(){
-  $(".tab_menu1 active").on("click", function(){
-    $(".tab_sub1").show();
-  });
-  $(".tab_menu2e").on("click", function(){
-    $(".tab_sub2").show();
-  });
+$(function () {
+
+  $('.infoMenu').click(function () {
+    let idx = $(this).index()
+    $('.infoMenu').removeClass('active')
+    $(this).addClass('active')
+
+    $('.bookInfo').eq(idx).show().siblings().hide()
+  })
+
 });
 
 
+$(function () {
+
+  $.get("./sub_txt/목차.txt", function (data) {
+    $("#detail").html(data);
+
+  });
+  $.get("./sub_txt/작가정보.txt", function (data) {
+    $("#bookIntro").html(data);
+
+  });
+  $.get("./sub_txt/책소개.txt", function (data) {
+    $("#basicsInfo").html(data);
+
+  });
+
+});

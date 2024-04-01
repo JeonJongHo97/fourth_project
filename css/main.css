@@ -90,7 +90,7 @@ p {
   top: 60px;
   right: -70px;
   color: #2e65e4;
-  z-index: 6;
+  z-index: 12;
 }
 #top_nav .login i {
   font-size: 30px;
@@ -137,7 +137,7 @@ p {
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  z-index: 5;
+  z-index: 10;
 }
 #bottom_nav .menu li {
   float: left;
