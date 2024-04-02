@@ -256,13 +256,17 @@ p {
 #main .main_2 #book_title .buy .sale {
   text-decoration: line-through;
 }
+#main .main_2 #book_title h4 {
+  padding: 24px 20px 0;
+  font-size: 17px;
+}
 #main .main_2 #book_title ul {
   display: flex;
 }
 #main .main_2 #book_title ul li {
   color: rgb(255, 222, 32);
   font-size: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 #main .main_2 #book_title p {
   padding-top: 20px;
