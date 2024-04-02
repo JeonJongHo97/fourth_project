@@ -230,6 +230,7 @@ p {
   width: 600px;
   height: 600px;
   background-color: #fff;
+  margin-left: 100px;
 }
 #main .main_2 #book_title {
   width: 500px;
@@ -293,7 +294,7 @@ p {
   width: 500px;
   display: flex;
   align-items: center;
-  margin: 20px 50px;
+  margin: 30px 50px 0;
 }
 #main .main_2 #number .plus {
   width: 250px;
@@ -301,9 +302,11 @@ p {
   font-size: 30px;
   text-align: center;
   border-radius: 5px;
+  font-size: 20px;
+  border: 1px solid #ccc;
 }
 #main .main_2 #number button {
-  padding: 16px 20px;
+  padding: 16px 30px;
   margin: 0 10px;
   background-color: #ccc;
   border: #eee;
@@ -316,13 +319,18 @@ p {
   font-weight: bold;
 }
 #main .main_2 #number i {
+  margin-left: 7px;
   font-size: 30px;
   padding: 0 7px;
 }
+#main .main_2 #number i:hover {
+  color: red;
+  cursor: pointer;
+}
 #main .main_2 #sell {
-  width: 300px;
-  height: 50px;
-  margin: 0px 50px;
+  width: 500px;
+  height: 60px;
+  margin: 30px 50px 0;
   background-color: #eaeaea;
   font-size: 17px;
   font-weight: bold;
@@ -334,11 +342,12 @@ p {
   cursor: pointer;
   background-color: #2e65e4;
   color: white;
+  border: none;
 }
 
 #introduce {
   width: 1200px;
-  height: 100%;
+  height: 800px;
   background-color: rgb(255, 255, 255);
   margin: 100px auto 0;
 }
@@ -380,6 +389,36 @@ p {
   left: 0;
   display: flex;
   flex-direction: column;
+}
+#introduce #bookInfo_box .bookInfo #detail h3 {
+  font-size: 20px;
+}
+#introduce #bookInfo_box .bookInfo #detail h4 {
+  font-size: 17px;
+}
+#introduce #bookInfo_box .bookInfo #detail p {
+  font-size: 15px;
+  font-weight: lighter;
+}
+#introduce #bookInfo_box .bookInfo #bookIntro h3 {
+  padding: 20px 0;
+  font-size: 25px;
+}
+#introduce #bookInfo_box .bookInfo #bookIntro p {
+  padding: 20px 30px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+#introduce #bookInfo_box .bookInfo #bookIntro h4 {
+  font-size: 17px;
+}
+#introduce #bookInfo_box .bookInfo #basicsInfo h4 {
+  font-size: 20px;
+  padding-top: 20px;
+}
+#introduce #bookInfo_box .bookInfo #basicsInfo p {
+  font-weight: lighter;
+  font-size: 17px;
 }
 #introduce #bookInfo_box .bookInfo .comment {
   width: 800px;
@@ -448,20 +487,24 @@ p {
 
 #week {
   width: 1200px;
-  height: 550px;
-  margin: 200px auto 0;
+  height: 650px;
+  margin: 0 auto;
   position: relative;
 }
 #week .title {
   position: absolute;
   left: 43%;
   top: 3%;
+  margin: 40px 0;
+}
+#week .title h1 {
+  font-weight: bolder;
 }
 #week .week_1 {
   width: 250px;
   height: 400px;
   float: left;
-  margin: 100px 25px;
+  margin: 150px 25px 20px;
   text-align: center;
   border: 1px solid #eee;
   box-shadow: 2px 2px 1px #ccc;
@@ -471,10 +514,11 @@ p {
 #week .week_1 img {
   margin-top: 10px;
   width: 200px;
-  height: 270px;
+  height: 250px;
 }
 #week .week_1 h3 {
   padding: 40px 30px;
+  font-weight: lighter;
 }
 #week .week_1 .part_img {
   width: 50px;
@@ -501,6 +545,7 @@ footer {
   width: 100%;
   height: 300px;
   background-color: #f4f4f4;
+  margin-top: 30px;
 }
 footer #footer_1 {
   width: 1200px;

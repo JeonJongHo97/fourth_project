@@ -133,36 +133,43 @@ p {
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
 }
-#bottom_nav .menu {
+#bottom_nav .all_menu {
   width: 1200px;
   margin: 0 auto;
   position: relative;
+}
+#bottom_nav .all_menu .menu {
+  width: 1200px;
+  margin: 0 auto;
+  position: absolute;
   z-index: 10;
 }
-#bottom_nav .menu li {
+#bottom_nav .all_menu .menu li {
   float: left;
   width: 200px;
   line-height: 45px;
   text-align: center;
   background-color: #fff;
 }
-#bottom_nav .menu li a {
+#bottom_nav .all_menu .menu li a {
   color: #000000;
   font-size: 18px;
   font-weight: 500;
 }
-#bottom_nav .menu li a:hover {
+#bottom_nav .all_menu .menu li a:hover {
   color: #ffffff;
 }
-#bottom_nav .menu li:hover {
+#bottom_nav .all_menu .menu li:hover {
   background-color: #5084ff;
+  border-bottom: 2px solid #ccc;
 }
-#bottom_nav .menu .sub {
+#bottom_nav .all_menu .menu .sub {
   background-color: #ddd;
   display: none;
 }
-#bottom_nav .menu .sub li:hover {
+#bottom_nav .all_menu .menu .sub li:hover {
   background-color: rgb(107, 166, 207);
+  border-bottom: 2px solid #ccc;
 }
 
 #sliderwrap {
@@ -612,7 +619,7 @@ article {
 
 #week {
   width: 1200px;
-  height: 550px;
+  height: 300px;
   margin: 70px auto 0;
   position: relative;
 }
@@ -623,7 +630,7 @@ article {
 }
 #week .week_1 {
   width: 250px;
-  height: 480px;
+  height: 400px;
   float: left;
   margin: 130px 25px;
   text-align: center;
@@ -633,18 +640,12 @@ article {
   overflow: hidden;
 }
 #week .week_1 img {
-  margin-top: 10px;
+  margin-top: 30px;
   width: 200px;
   height: 250px;
 }
 #week .week_1 h3 {
-  padding-top: 20px;
-}
-#week .week_1 h6 {
-  padding-top: 10px;
-}
-#week .week_1 p {
-  padding: 20px 10px;
+  padding-top: 40px;
 }
 #week .week_1 .part_img {
   width: 50px;

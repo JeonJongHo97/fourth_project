@@ -119,45 +119,60 @@
     margin: 20px 0;
     border-top: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
+    
 
-    .menu {
+    .all_menu {
         width: 1200px;
         margin: 0 auto;
         position: relative;
-        z-index: 10;
 
-        li {
-            float: left;
-            width: 200px;
-            line-height: 45px;
-            text-align: center;
-            background-color: #fff;
 
-            a {
-                color: #000000;
-                font-size: 18px;
-                font-weight: 500;
+        .menu {
+            width: 1200px;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 10;
+
+            li {
+                float: left;
+                width: 200px;
+                line-height: 45px;
+                text-align: center;
+                background-color: #fff;
+
+                a {
+                    color: #000000;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                a:hover { 
+                    color: #ffffff;
+                    
+                }
+
+                
             }
-            a:hover {
-                color: #ffffff;
-            }
 
-        }
-        
-        li:hover {
-            background-color:#5084ff;
-        }
-
-        .sub {
-            background-color: #ddd;
-            display: none;
-            
 
             li:hover {
-                background-color: rgb(107, 166, 207);
+                background-color: #5084ff;
+                border-bottom: 2px solid #ccc;
+                
             }
-        }
 
+            .sub {
+                background-color: #ddd;
+                display: none;
+
+
+                li:hover {
+                    background-color: rgb(107, 166, 207);
+                    border-bottom: 2px solid #ccc;
+                }
+            }
+
+        }
     }
 }
 
@@ -701,7 +716,7 @@ article {
 
 #week {
     width: 1200px;
-    height: 550px;
+    height: 300px;
     margin: 70px auto 0;
     position: relative;
 
@@ -714,7 +729,7 @@ article {
 
     .week_1 {
         width: 250px;
-        height: 480px;
+        height: 400px;
         float: left;
         margin: 130px 25px;
         text-align: center;
@@ -724,23 +739,14 @@ article {
         overflow: hidden;
 
         img {
-            margin-top: 10px;
+            margin-top: 30px;
             width: 200px;
             height: 250px;
         }
 
         h3 {
-            padding-top: 20px;
+            padding-top: 40px;
         }
-
-        h6 {
-            padding-top: 10px;
-        }
-
-        p {
-            padding: 20px 10px;
-        }
-
         .part_img {
             width: 50px;
             height: 200px;
